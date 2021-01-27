@@ -1,0 +1,21 @@
+
+
+body{
+/* margin: 0%; */
+padding:100px;
+}
+
+/* .bank-title{
+    text-align: center;
+} */
+
+.submit-area{
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+#transaction-area{
+    display: none;
+}

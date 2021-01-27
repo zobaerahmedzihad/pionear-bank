@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pionear bank</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
 </head>
 <body>
-    <h1> Hello </h1>
+
+   
+
+    <div id="login-area">
+        <h1 class="text-center"> Welcome To Paionear Bank. </h1>
+         <div class="submit-area">
+            <h1> Login </h1><br>
+            <input type="email" name="" class="form-control" placeholder="Enter your gmail" required><br>
+            <input type="password" name=""class="form-control" placeholder="Enter your password"required><br>
+            <button class="btn btn-danger" id="login-button"> Login </button>
+
+        </div>
+
+    </div>
+    <div id="transaction-area">
+        <h1> hello </h1>
+    </div>
+<script>
+
+    const loginButton = document.getElementById("login-button");
+    loginButton.addEventListener("click", function(){
+    const loginArea = document.getElementById("login-area");
+    loginArea.style.display = "none";
+    const transactionArea = document.getElementById("transaction-area");
+    transactionArea.style.display = "block";
+
+    })
+
+</script>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
