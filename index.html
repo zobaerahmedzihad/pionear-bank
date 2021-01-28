@@ -38,7 +38,6 @@
                     <h2>$ <span id="currentDeposit">00</span></h2>
                 </div>
             </div>
-
             <div class="col-md-4">
                 <div class="withdraw status">
                     <h5>Withdraw</h5>
@@ -68,15 +67,16 @@
             <div class="col-md-6">
                 <div class="submit-area">
                     <h4>Withdraw</h4>
-                    <input type="text" class="form-control" placeholder="$ Ammount you want to Withdrae."><br>
-                    <button class="btn btn-success">Withdraw</button>
+                    <input id="withdrawAmount" type="text" class="form-control"
+                        placeholder="$ Ammount you want to Withdrae."><br>
+                    <button id="addWithdraw" class="btn btn-success">Withdraw</button>
                 </div>
             </div>
         </div>
 
     </div>
 
-                                        <!-- Javascript code start here.  -->
+    <!-- Javascript code start here.  -->
 
     <script>
 
@@ -90,13 +90,12 @@
 
         })
 
-                                 // Deposit button event handler. 
+        // Deposit button event handler. 
 
 
         const depositBtn = document.getElementById("addDeposit");
         depositBtn.addEventListener("click", function () {
-            const depositAmount = document.getElementById("depositAmount").value;
-            const depositNumber = parseFloat(depositAmount);
+            const depositNumber = getInputNumber("depositAmount");
 
             // const currentDeposit = document.getElementById("currentDeposit").innerText;
             // const currentDepositNumber = parseFloat(currentDeposit);
@@ -110,12 +109,28 @@
             document.getElementById("depositAmount").value = "";
         })
 
-        function ubdateSpanText(id, depositNumber) {
-            const current = document.getElementById(id).innerText;
-            const currentNumber = parseFloat(current);
-            const totalAmount = depositNumber + currentNumber;
-            document.getElementById(id).innerText = totalAmount;
+        // Withdraw button event handler. 
+
+        const withdrawBtn = document.getElementById("addWithdraw");
+        withdrawBtn.addEventListener("click", function(){
+           const withdrawNumber = getInputNumber("withdrawAmount");
+            console.log(withdrawNumber);
+
+        })
+
+        function getInputNumber(id){
+            const amount = document.getElementById(id).value;
+            const amountNumber = parseFloat(amount);
+            return amountNumber;
         }
+
+
+            function ubdateSpanText(id, depositNumber) {
+                const current = document.getElementById(id).innerText;
+                const currentNumber = parseFloat(current);
+                const totalAmount = depositNumber + currentNumber;
+                document.getElementById(id).innerText = totalAmount;
+            }
 
 
 
