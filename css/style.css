@@ -19,3 +19,19 @@ padding:100px;
 #transaction-area{
     display: none;
 }
+
+.status{
+    color: white;
+    margin: 0px 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.withdraw{
+    background-color: aqua;
+}
+.deposit{
+    background-color:gray;
+}
+.balance{
+    background-color: chartreuse;
+}
