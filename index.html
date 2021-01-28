@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,51 +9,115 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
+
 <body>
-                                <!-- Login section start from here.  -->
-   
+    <!-- Login section start from here.  -->
+
 
     <div id="login-area">
         <h1 class="text-center"> Welcome To Paionear Bank. </h1>
-         <div class="submit-area">
+        <div class="submit-area">
             <h1> Login </h1><br>
             <input type="email" name="" class="form-control" placeholder="Enter your gmail" required><br>
-            <input type="password" name=""class="form-control" placeholder="Enter your password"required><br>
+            <input type="password" name="" class="form-control" placeholder="Enter your password" required><br>
             <button class="btn btn-danger" id="login-button"> Login </button>
 
-        </div>                    
+        </div>
     </div>
 
-                                  <!-- Login section End from here.  -->
+    <!-- Login section End from here.  -->
 
-                                <!-- Deposit , Withdraw and Balance section start here. -->
+    <!-- Deposit , Withdraw and Balance section start here. -->
+
+<div id="transaction-area">
+   
+    <div class="row">
+        <div class="col-md-4">
+            <div class="deposit status">
+                <h5>Deposit</h5>
+                <h2>$00</h2>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div class="withdraw status">
+                <h5>Withdraw</h5>
+                <h2>$00</h2>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div class="balance status">
+                <h5>Balance</h5>
+                <h2>$1240</h2>
+            </div>
+        </div>
+    </div>
 
 
-                                  
-
-                                  
+                                    <!-- Deposit and withdraw section.  -->
 
 
-<script>
-                        // Login button event handler. 
-                        
+<div class="row">
+    <div class="col-md-6">
+       <div class="submit-area">
+           <h4>Deposit</h4>
+           <input id="depositAmount" type="text" class="form-control" placeholder="$ Ammount you want to Deposit."><br>
+           <button id="addDeposit" class="btn btn-success">Deposit</button>
+       </div>
+    </div>
+    <div class="col-md-6">
+       <div class="submit-area">
+           <h4>Withdraw</h4>
+           <input type="text" class="form-control" placeholder="$ Ammount you want to Withdrae."><br>
+           <button class="btn btn-success">Withdraw</button>
+       </div>
+    </div>
+</div>
 
-    const loginButton = document.getElementById("login-button");
-    loginButton.addEventListener("click", function(){
-    const loginArea = document.getElementById("login-area");
-    loginArea.style.display = "none";
-    const transactionArea = document.getElementById("transaction-area");
-    transactionArea.style.display = "block";
 
-    })
+</div>
+
+
+
+
+
+
+
+    <script>
+
+        // Login button event handler. 
+
+
+        const loginButton = document.getElementById("login-button");
+        loginButton.addEventListener("click", function () {
+            const loginArea = document.getElementById("login-area");
+            loginArea.style.display = "none";
+            const transactionArea = document.getElementById("transaction-area");
+            transactionArea.style.display = "block";
+
+        })
 
                        // Deposit button event handler. 
+const depositBtn = document.getElementById("addDeposit");
+depositBtn.addEventListener("click", function(){
+    const depositAmount = document.getElementById("depositAmount").value;
+    const depositNumber = parseFloat(depositAmount);
 
 
-</script>
+})
+
+
+
+
+
+
+
+    </script>
 
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
